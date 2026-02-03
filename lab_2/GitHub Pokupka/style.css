@@ -109,8 +109,10 @@ button {
     color: #1f2328;
     border: 1px solid #d0d7de;
 }
-
-/* Адаптивность: если экран узкий, карточки встанут друг под друга */
+.header-logo {
+    width: 32px;
+    height: 32px;
+}
 @media (max-width: 800px) {
     .pricing-container {
         flex-direction: column;
