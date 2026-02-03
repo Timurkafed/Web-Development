@@ -1,0 +1,107 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    color: #262626;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+}
+
+.main-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto; 
+    padding: 20px;
+}
+
+.left-side {
+    flex: 1; 
+    padding: 40px;
+    text-align: center;
+}
+
+.insta-logo {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.left-side h1 {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.left-side span {
+    color: #ff0050; 
+}
+
+.right-side {
+    flex: 1;
+    border-left: 1px solid #dbdbdb; 
+    padding-left: 50px;
+}
+
+.login-box {
+    max-width: 350px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 20px; 
+    background-color: #fafafa;
+    box-sizing: border-box; 
+}
+
+.blue-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #b2dffc; 
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forgot-link {
+    display: block;
+    margin: 20px 0;
+    text-decoration: none;
+    font-size: 14px;
+    color: #262626;
+}
+
+.fb-btn, .create-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.create-btn {
+    color: #0095f6;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #8e8e8e;
+    margin-top: 50px;
+}
+
+.mockup-placeholder {
+    margin-top: 30px;
+    color: #ccc;
+    font-style: italic;
+}
