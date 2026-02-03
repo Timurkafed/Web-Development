@@ -113,6 +113,8 @@ button {
     width: 32px;
     height: 32px;
 }
+
+
 @media (max-width: 800px) {
     .pricing-container {
         flex-direction: column;
