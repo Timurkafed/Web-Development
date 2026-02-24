@@ -1,0 +1,27 @@
+<div class="catalog-hero">
+    <h1 class="catalog-title">🛍️ Каталог товаров</h1>
+    <p class="catalog-subtitle">{{ products.length }} товаров · Лучшие цены на Kaspi.kz</p>
+    <div class="catalog-badges">
+        <span class="badge">✅ Быстрая доставка</span>
+        <span class="badge">⭐ Рейтинг покупателей</span>
+        <span class="badge">💚 Поделиться в WhatsApp / Telegram</span>
+    </div>
+
+    @if (hasDeletedProducts) {
+    <button class="btn-restore" (click)="restoreAll()">
+        🔄 Восстановить все удалённые товары
+    </button>
+    }
+</div>
+
+<section class="catalog">
+    @for (product of products; track product.id) {
+    <app-product-card [product]="product" (deleteProduct)="onDeleteProduct($event)" />
+    }
+    @if (products.length === 0) {
+    <div class="empty-state">
+        <p>😔 Все товары удалены</p>
+        <button class="btn-restore" (click)="restoreAll()">🔄 Восстановить всё</button>
+    </div>
+    }
+</section>

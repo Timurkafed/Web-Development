@@ -1,0 +1,276 @@
+.card {
+    background: #ffffff;
+    border: 1px solid #f0d8d8;
+    border-radius: 16px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    box-shadow: 0 2px 12px rgba(180, 40, 40, 0.06);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(180, 40, 40, 0.16);
+    border-color: #f8b4b4;
+}
+
+/* ── Delete Button ── */
+.btn-delete {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #c41e2a;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(196, 30, 42, 0.45);
+    transition: background 0.2s, transform 0.15s;
+    line-height: 1;
+    font-family: inherit;
+}
+
+.btn-delete:hover {
+    background: #9b0a14;
+    transform: scale(1.18);
+}
+
+/* ── Gallery ── */
+.gallery {
+    position: relative;
+    background: #fdf0f0;
+}
+
+.main-image-wrapper {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+/* The <a> tag wrapping the image must be block-level so height:100% on img works */
+.main-image-wrapper>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+    transition: opacity 0.2s ease;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.85);
+    color: #c41e2a;
+    border: 1px solid #f0d0d0;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s;
+}
+
+.nav-btn:hover {
+    background: #c41e2a;
+    color: #ffffff;
+    border-color: #c41e2a;
+}
+
+.prev {
+    left: 8px;
+}
+
+.next {
+    right: 8px;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 6px;
+    padding: 8px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #c41e2a transparent;
+}
+
+.thumbnail {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background: #fff;
+    flex-shrink: 0;
+    transition: border-color 0.2s ease, transform 0.15s ease;
+    padding: 3px;
+}
+
+.thumbnail:hover {
+    transform: scale(1.08);
+    border-color: #f8b4b4;
+}
+
+.thumbnail.active {
+    border-color: #c41e2a;
+}
+
+/* ── Info ── */
+.info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.product-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.2s;
+}
+
+.product-name:hover {
+    color: #c41e2a;
+}
+
+.description {
+    font-size: 0.82rem;
+    color: #737373;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* ── Rating ── */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stars {
+    display: flex;
+    gap: 1px;
+}
+
+.star {
+    font-size: 1.1rem;
+}
+
+.star.filled {
+    color: #f59e0b;
+}
+
+.star.half {
+    color: #f59e0b;
+    opacity: 0.55;
+}
+
+.star.empty {
+    color: #d4c5c5;
+}
+
+.rating-value {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #888;
+}
+
+/* ── Price ── */
+.price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #c41e2a;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+/* ── Actions ── */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.88;
+    transform: scale(1.02);
+}
+
+.btn-buy {
+    background: linear-gradient(135deg, #c41e2a, #9b0a14);
+    color: #ffffff;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.share-buttons .btn {
+    flex: 1;
+    font-size: 0.78rem;
+    padding: 8px 10px;
+}
+
+.btn-whatsapp {
+    background: #16a34a;
+    color: #ffffff;
+}
+
+.btn-telegram {
+    background: #15803d;
+    color: #ffffff;
+}

@@ -1,0 +1,97 @@
+/* ── Hero Banner ── */
+.catalog-hero {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 24px 8px;
+    text-align: center;
+}
+
+.btn-restore {
+    margin-top: 12px;
+    background: #c41e2a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    font-family: inherit;
+}
+
+.btn-restore:hover {
+    background: #9b0a14;
+    transform: scale(1.03);
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.catalog-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #c41e2a;
+    margin-bottom: 8px;
+}
+
+.catalog-subtitle {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 16px;
+}
+
+.catalog-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.badge {
+    background: #f0faf4;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+/* ── Grid ── */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 32px 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+    .catalog {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 24px 16px;
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 640px) {
+    .catalog {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 16px 12px;
+    }
+}
